@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  resources :devices
-  resources :networks
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root 'root#root'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :zones do
+    resources :devices
+  end
+
+  resources :networks
 end

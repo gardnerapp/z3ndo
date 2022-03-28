@@ -1,0 +1,32 @@
+<%= form_with(model: zone) do |form| %>
+  <% if zone.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(zone.errors.count, "error") %> prohibited this zone from being saved:</h2>
+
+      <ul>
+        <% zone.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :rules, style: "display: block" %>
+    <%= form.text_field :rules %>
+  </div>
+
+  <div>
+    <%= form.label :purpose, style: "display: block" %>
+    <%= form.text_area :purpose %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

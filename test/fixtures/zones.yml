@@ -2,14 +2,10 @@
 
 one:
   name: MyString
-  purpose: MyString
-  ip: MyString
-  mac: MyString
-  type: 
+  rules: 
+  purpose: MyText
 
 two:
   name: MyString
-  purpose: MyString
-  ip: MyString
-  mac: MyString
-  type: 
+  rules: 
+  purpose: MyText

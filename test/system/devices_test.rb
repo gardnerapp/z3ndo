@@ -18,6 +18,7 @@ class DevicesTest < ApplicationSystemTestCase
     fill_in "Mac", with: @device.mac
     fill_in "Name", with: @device.name
     fill_in "Purpose", with: @device.purpose
+    fill_in "Type", with: @device.type
     click_on "Create Device"
 
     assert_text "Device was successfully created"
@@ -32,6 +33,7 @@ class DevicesTest < ApplicationSystemTestCase
     fill_in "Mac", with: @device.mac
     fill_in "Name", with: @device.name
     fill_in "Purpose", with: @device.purpose
+    fill_in "Type", with: @device.type
     click_on "Update Device"
 
     assert_text "Device was successfully updated"
